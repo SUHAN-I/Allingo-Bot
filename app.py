@@ -1,17 +1,16 @@
 import streamlit as st
-from openai import OpenAI
+import requests
 
 # OpenRouter client
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=st.secrets["API_KEY"],  
-)
+MODEL = "deepseek/deepseek-r1-0528:free"
+api_key=st.secrets("API_KEY"),  
+
 
 # Function for AI response
+
 def generate_response(user_input):
-    completion = client.chat.completions.create(
-        model="deepseek/deepseek-r1-0528:free",
-        messages=[
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    messages=[
             {
                 "role": "system",
                 "content": """
