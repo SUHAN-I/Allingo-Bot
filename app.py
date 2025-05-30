@@ -1,13 +1,13 @@
 import streamlit as st
 from openai import OpenAI
 
-# Setup the OpenRouter client
+# OpenRouter client
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",  # Replace with your secure API key
+    api_key=st.secrets["API_KEY"],  
 )
 
-# Function to get AI response
+# Function for AI response
 def generate_response(user_input):
     completion = client.chat.completions.create(
         model="deepseek/deepseek-r1-0528:free",
@@ -98,7 +98,7 @@ Jump, run, sing, talk – all are verbs!
     )
     return completion.choices[0].message.content
 
-# --- Streamlit App UI ---
+# Streamlit App UI
 st.set_page_config(page_title="Grammar Bot", layout="centered")  # Optional: Prettier layout
 
 st.title("📘 English Grammar Chatbot")
