@@ -1,10 +1,10 @@
 import streamlit as st
 import requests
 
+
 # OpenRouter setup
 MODEL = "deepseek/deepseek-r1-0528:free"
 API_key = st.secrets["API_KEY"]
-
 
 
 # Function to generate grammar lesson
@@ -108,6 +108,7 @@ Jump, run, sing, talk – all are verbs!
     
     response.raise_for_status()
     return response.json()["choices"][0]["message"]["content"]
+
 
 # Streamlit App
 st.set_page_config(page_title="Allingo Bot", layout="centered")
