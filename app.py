@@ -20,7 +20,7 @@ response = requests.post(
   },
   data=json.dumps({
     "model": "deepseek/deepseek-r1-0528:free",
-    "messages"=[
+    "messages": [
             {
                 "role": "system",
                 "content": """
