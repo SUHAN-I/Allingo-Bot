@@ -5,7 +5,8 @@ import json
 
 # OpenRouter client
 MODEL = "deepseek/deepseek-r1-0528:free"
-api_key=st.secrets("API_KEY"),  
+#api_key=st.secrets("API_KEY")
+API_KEY = "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"  
 
 
 # Function for AI response
