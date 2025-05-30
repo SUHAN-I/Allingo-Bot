@@ -121,6 +121,6 @@ user_input = st.text_input("✏️ Type a grammar topic or question:")
 if st.button("📚 Ask Allingo"):
     if user_input:
         result = generate_response(user_input)
-        st.markdown(result)  # Enables bold text, emojis, and markdown
+        st.markdown(result)  
     else:
         st.warning("Please enter a topic or question.")
