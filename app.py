@@ -3,8 +3,8 @@ import requests
 
 # OpenRouter setup
 MODEL = "deepseek/deepseek-r1-0528:free"
-#API_key = "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"
-API_key = st.secrets["API_KEY"]
+API_key = "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"
+#API_key = st.secrets["API_KEY"]
 
 # Function to generate grammar lesson
 def generate_response(user_input):
