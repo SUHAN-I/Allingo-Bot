@@ -95,7 +95,7 @@ Jump, run, sing, talk – all are verbs!
         headers={
             "Authorization": f"Bearer {API_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/SUHAN-I/Allingo-Bot",  # Replace with your actual repo
+            "HTTP-Referer": "https://github.com/SUHAN-I/Allingo-Bot",  
             "X-Title": "Allingo Bot"
         },
         json={
