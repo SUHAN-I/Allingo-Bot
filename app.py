@@ -53,7 +53,7 @@ API_KEY = "sk-or-v1-d6e015b06c1275debf90c00ab79b79e70cb8472f53b2b637b4347dd9fc41
 
 # Function for AI response
 def generate_response(user_input):
-response = requests.post(
+#response = requests.post(
   url="https://openrouter.ai/api/v1/chat/completions",
   headers={
     "Authorization": "Bearer <OPENROUTER_API_KEY>",
