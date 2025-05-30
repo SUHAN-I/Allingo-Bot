@@ -4,7 +4,7 @@ import requests
 # OpenRouter setup
 MODEL = "deepseek/deepseek-r1-0528:free"
 API_key = "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"
-#API_key = st.secrets["API_KEY"]
+
 
 # Function to generate grammar lesson
 def generate_response(user_input):
@@ -112,11 +112,11 @@ Jump, run, sing, talk – all are verbs!
 st.set_page_config(page_title="Allingo Bot", layout="centered")
 
 st.title("Allingo Bot")
-st.subheader("📚 Master English Grammar with AI-Powered Examples, Practice Questions, and Tips!")
+st.subheader("🎓 Master English Grammar with AI-Powered Examples, Practice Questions, and Tips!")
 
 user_input = st.text_input("✏️ Type a grammar topic or question:")
 
-if st.button("🎓 Ask Allingo"):
+if st.button("📚 Ask Allingo"):
     if user_input:
         result = generate_response(user_input)
         st.markdown(result)  # Enables bold text, emojis, and markdown
