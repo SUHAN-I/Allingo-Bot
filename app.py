@@ -242,7 +242,7 @@ Jump, run, sing, talk – all are verbs!
 
 
 # Streamlit App UI
-st.set_page_config(page_title="Grammar Bot", layout="centered")  # Optional: Prettier layout
+#st.set_page_config(page_title="Grammar Bot", layout="centered")  # Optional: Prettier layout
 
 st.title("📘 English Grammar Chatbot")
 st.subheader("Learn English grammar with examples, questions, and tips!")
