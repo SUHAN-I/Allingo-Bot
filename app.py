@@ -2,6 +2,48 @@ import streamlit as st
 import requests
 import json
 
+'''
+# Your OpenRouter API key
+API_KEY = "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"
+MODEL = "deepseek/deepseek-r1-0528:free"
+
+# Function to call OpenRouter model
+def generate_response(user_input):
+    url = "https://openrouter.ai/api/v1/chat/completions"
+
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "model": MODEL,
+        "messages": [
+            {"role": "system", "content": "You are an English grammar teacher. Explain the topic clearly with 1 example, 1 short Q&A, and 1 multiple-choice question."},
+            {"role": "user", "content": f"Explain this topic: {user_input}"}
+        ],
+        "temperature": 0.7,
+        "max_tokens": 500
+    }
+
+    response = requests.post(url, headers=headers, json=payload)
+
+    if response.status_code == 200:
+        return response.json()["choices"][0]["message"]["content"]
+    else:
+        return "❌ Error: Could not get a response. Please try again."
+
+'''
+
+
+
+
+
+
+
+
+
+
 
 # OpenRouter client
 MODEL = "deepseek/deepseek-r1-0528:free"
@@ -10,7 +52,7 @@ API_KEY = "sk-or-v1-d6e015b06c1275debf90c00ab79b79e70cb8472f53b2b637b4347dd9fc41
 
 
 # Function for AI response
-
+def generate_response(user_input):
 response = requests.post(
   url="https://openrouter.ai/api/v1/chat/completions",
   headers={
