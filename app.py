@@ -3,7 +3,6 @@ import requests
 
 # OpenRouter setup
 MODEL = "deepseek/deepseek-r1-0528:free"
-#API_key = "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"
 API_key = st.secrets["API_KEY"]
 
 
@@ -118,7 +117,7 @@ st.subheader("🎓 Master English Grammar with AI-Powered Examples, Practice Que
 
 user_input = st.text_input("✏️ Type a grammar topic or question:")
 
-if st.button("📚 Ask Allingo"):
+if st.button("✨  Ask Allingo"):
     if user_input:
         result = generate_response(user_input)
         st.markdown(result)  
